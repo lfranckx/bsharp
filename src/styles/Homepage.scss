@@ -1,0 +1,84 @@
+@import "./vars";
+
+#homepage {
+    header {
+        background: $black2;
+        background-image: url('../images/hero.png');
+        background-size: cover;
+        min-height: 90vh;
+        scroll-snap-align: center;;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h1 {
+            margin-bottom: 40px;
+            color: $white;
+
+            span {
+                display: block;
+                font-family: $font3;
+                font-size: $extreme;
+                letter-spacing: 8px;
+                line-height: 1.6;
+                font-weight: $light;
+            }
+        }
+    }
+
+    section {
+        h2 {
+            font-family: $font2;
+            font-size: $larger;
+            font-weight: $bolder;
+            max-width: $desktop;
+            margin: auto;
+            padding-left: 15px;
+        }
+
+        .content-wrap {
+            padding: 100px 0;
+        }
+    }
+
+    #about {
+        .banner {
+            background: $black;
+            width: 100%;
+            padding: 20px;
+
+            h2 {
+                span {
+                    color: $white; 
+
+                    &:nth-child(1) {
+                        color: $red;
+                    }
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: $midsize;
+            margin: auto;
+            
+            .img-wrap {
+                margin-right: 20px;
+                img {
+                    // max-width: 350px;
+                }
+            }
+
+            p {
+                color: $black;
+                font-size: $regular;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

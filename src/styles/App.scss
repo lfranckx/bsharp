@@ -1,0 +1,71 @@
+@import "./vars";
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+h1, h2, h3, h4, h5, ul, p, a {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  background: none;
+  outline: unset;
+  border: unset;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn {
+  background: $red;
+  color: $white;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: $shadow;
+  font-family: $font2;
+  font-weight: $bold;
+  font-size: $regular;
+  cursor: pointer;
+
+  &:hover {
+    background: $black;
+  }
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: $bolder;
+}
+
+.red {
+  color: $red;
+}
+

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'ArchivoNarrow-Italic';
+    src: url('./fonts/ArchivoNarrow-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'ArchivoNarrow';
+    src: url('./fonts/ArchivoNarrow-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('./fonts/BebasNeue-Regular.ttf');
+}
