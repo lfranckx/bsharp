@@ -1,10 +1,16 @@
+import React, { useEffect } from 'react';
 import '../styles/Homepage.scss';
-import React from 'react';
+import '../styles/About.scss';
 import { Link } from 'react-router-dom';
-
 import cello from '../images/cello.png';
+import Pricing from '../components/Pricing';
+import Testimonials from '../components/Testimonials';
 
 export default function Homepage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     return (
         <div id='homepage'>
             <header>
@@ -42,6 +48,9 @@ export default function Homepage() {
                         </div>
                     </div>
                 </section>
+
+                <Pricing />
+                <Testimonials />
             </main>
         </div>
     );

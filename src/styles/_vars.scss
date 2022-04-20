@@ -2,8 +2,11 @@ $black2: #282c34;
 $black: rgb(9, 9, 9);
 $white: #fff;
 $red: #CF2434;
-$darkred: #871520;
+$darkred: #881520;
 $blue: #155E87;
+$darkblue: #0f4564;
+$green: #498258;
+$gray: #8e8e8e;
 
 // Font Sizes
 $fontLarge: 3rem;
@@ -18,7 +21,7 @@ $italic: 'ArchivoNarrow-Italic', 'Montserrat', sans-serif;
 $boldest: 900;
 $bolder: 700;
 $bold: 600;
-$regular: 400;
+$medium: 400;
 $light: 300;
 $lighter: 200;
 $lightest: 100;
@@ -26,8 +29,9 @@ $lightest: 100;
 // Font Size
 $extreme: 88px;
 $largest: 40px;
-$larger: 32px;
-$large: 24px;
+$larger: 36px;
+$large: 28px;
+$regularplus: 24px;
 $regular: 20px;
 $small: 16px;
 $smaller: 14px;

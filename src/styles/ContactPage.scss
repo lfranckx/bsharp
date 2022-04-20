@@ -1,0 +1,89 @@
+@import "./vars";
+
+#contact-page {
+    .header {
+        width: 100%;
+        height: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../images/contact-header.png');
+        background-size: 100%;
+
+        h1 {
+            color: $white;
+            font-family: $font3;
+            font-size: $extreme;
+            letter-spacing: 7px;
+            line-height: 1.6;
+            font-weight: $light;
+        }
+    }
+
+    .form-wrap {
+        max-width: $desktop;
+        margin: auto;
+        padding: 60px 15px;
+
+        form {
+            width: 100%;
+
+            .flex {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .fieldset {
+                padding: 15px;
+
+                .wrap {
+                    min-height: 80px;
+
+                    label {
+                        border-bottom: 1px solid $black2;
+                        margin: 20px 0;
+                        color: $gray;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 48.18px;
+                    }
+
+                    input {
+                        color: $black2;
+                        font-weight: $bold;
+
+                        &::placeholder {
+                            color: $gray;
+                            font-weight: $medium;
+                        }
+                    }
+
+                    select {
+                        width: 70%;
+                        padding: 10px;
+                        font-weight: $bold;
+                    }
+
+                    textarea {
+                        border: solid 1px $black2;
+                        border-radius: 7px;
+                    }
+
+                    .custom {
+                        border: none;
+                        height: auto;
+                    }
+                }
+            }
+
+            .btn-wrap {
+                padding: 0 15px;
+            }
+
+            .btn {
+                padding: 5px 25px;
+                font-size: $regular;
+                margin: 20px;
+            }
+        }
+    }
+}

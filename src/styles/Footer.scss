@@ -1,0 +1,81 @@
+@import "./vars";
+
+footer {
+    background: $black2;
+    padding-bottom: 15px;
+    text-align: center;
+
+    small {
+        color: $white;
+    }
+
+    .content-wrap {
+        padding: 100px 30px 48px;
+        max-width: $desktop;
+        margin: auto;
+
+        .content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .newsletter-wrap {
+                text-align: left;
+
+                h3, h4 {
+                    color: $white;
+                    padding-bottom: 10px;
+                }
+
+                label {
+                    border-bottom: 1px solid $white;
+                }
+
+                input {
+                    color: $white;
+
+                    &::placeholder {
+                        color: $white;
+                    }
+                }
+
+                .btn {
+                    font-size: $small;
+                    padding: 4px 20px;
+
+                    margin: 15px 0;
+                }
+            }
+
+            .menu-wrap {
+                text-align: right;
+
+                p {
+                    color: $white;
+                    font-family: $font2;
+                    font-weight: $bold;
+                    text-decoration: underline;
+                    padding: 10px 0;
+                }
+
+                .menu {
+                    li {
+                        padding: 10px 0;
+                    }
+                }
+
+                .link {
+                    color: $white;
+                    font-family: $font2;
+                    cursor: pointer;
+                    transition: none;
+                    text-decoration: none;
+
+                    &:hover {
+                        font-weight: $bold;
+                    }
+                }
+            }
+        }
+    }
+}

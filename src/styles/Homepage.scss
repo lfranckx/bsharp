@@ -21,7 +21,7 @@
                 display: block;
                 font-family: $font3;
                 font-size: $extreme;
-                letter-spacing: 8px;
+                letter-spacing: 7px;
                 line-height: 1.6;
                 font-weight: $light;
             }
@@ -29,55 +29,30 @@
     }
 
     section {
+        .banner {
+            background: $black;
+            width: 100%;
+            padding: 30px 20px;
+        }
+
         h2 {
             font-family: $font2;
-            font-size: $larger;
+            font-size: $largest;
             font-weight: $bolder;
             max-width: $desktop;
             margin: auto;
-            padding-left: 15px;
+
+            span {
+                font-family: $font2;
+            }
         }
 
         .content-wrap {
             padding: 100px 0;
-        }
-    }
 
-    #about {
-        .banner {
-            background: $black;
-            width: 100%;
-            padding: 20px;
-
-            h2 {
-                span {
-                    color: $white; 
-
-                    &:nth-child(1) {
-                        color: $red;
-                    }
-                }
-            }
-        }
-
-        .content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: $midsize;
-            margin: auto;
-            
-            .img-wrap {
-                margin-right: 20px;
-                img {
-                    // max-width: 350px;
-                }
-            }
-
-            p {
-                color: $black;
-                font-size: $regular;
-                margin-bottom: 12px;
+            .content {
+                max-width: $midsize;
+                margin: auto;
             }
         }
     }
