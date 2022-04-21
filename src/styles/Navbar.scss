@@ -55,6 +55,8 @@
                 font-size: $small;
                 margin: 0 20px;
                 cursor: pointer;
+
+                
         
                 &:hover {
                     text-decoration: underline;
@@ -65,6 +67,16 @@
                 padding: 4px 20px;
                 font-size: $small;
                 margin: 0 10px;
+            }
+
+            @media screen and (max-width: $phone) {
+                .link {
+                    display: none;
+                }
+                
+                .btn, .btn-secondary {
+                    font-size: calc($small * .8);
+                }
             }
         }
     }

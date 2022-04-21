@@ -59,11 +59,13 @@ export default function Testimonials() {
                     </ul>
                 </div>
 
-                <div className='content-bar'>
-                    <div className='item'><h3>Want your first free lesson?</h3></div>
-                    <div className='item text'><p>Send us a message and we’ll set up the time and day. No strings attached.</p></div>
-                    <div className='item btn-wrap'>
-                        <Link to='/contact' className='btn' >Get Started</Link>
+                <div className='content-wrap'>
+                    <div className='content-bar'>
+                        <div className='item'><h3>Want your first free lesson?</h3></div>
+                        <div className='item text'><p>Send us a message and we’ll set up the time and day. No strings attached.</p></div>
+                        <div className='item btn-wrap'>
+                            <Link to='/contact' className='btn' >Get Started</Link>
+                        </div>
                     </div>
                 </div>
             </section>
