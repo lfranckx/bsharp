@@ -38,7 +38,7 @@
         .banner {
             background: $black;
             width: 100%;
-            padding: 30px 20px;
+            padding: 30px 0;
         }
 
         h2 {
@@ -144,6 +144,19 @@
             .content-wrap {    
                 .content {
                     max-width: calc($midsize * .8);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    #homepage {
+        header {
+            height: 75vh;
+            h1 {
+                span {
+                    font-size: calc(.3 * $extreme);
                 }
             }
         }
