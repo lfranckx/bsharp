@@ -75,7 +75,7 @@ const ContactPage = () => {
     return (
         <>
             <Helmet >
-                <title>Contact B# Music Lessons</title>
+                <title>Contact | B# Music Lessons</title>
                 <meta name='description' content='Get in touch with B# Music Lessons for your first free lesson!'/>
             </Helmet>
             <div id='contact-page'>
