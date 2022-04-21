@@ -29,8 +29,24 @@
     
             p {
                 color: $black;
-                font-size: $regular;
+                font-size: $regularplus;
                 margin-bottom: 20px;
+            }
+
+            @media screen and (max-width: $midsize) {
+                display: block;
+
+                .img-wrap {
+                    float: left;
+                    max-width: 300px;
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                p {
+                    font-size: calc($regularplus * .8);
+                }
             }
         }
     }

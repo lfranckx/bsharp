@@ -29,6 +29,7 @@ h2, h3 {
 
 p {
   line-height: 1.8;
+  font-size: $regular;
 }
 
 a {
@@ -84,7 +85,7 @@ button {
   box-shadow: $shadow;
   font-family: $font2;
   font-weight: $bold;
-  font-size: $regular;
+  font-size: $regularplus;
   cursor: pointer;
 }
 
@@ -134,4 +135,27 @@ button {
 
 .text-right {
   text-align: right;
+}
+
+@media screen and (max-width: $midsize) {
+  h2, h3 {
+    font-size: calc(.8 * $large);
+  }
+
+  p {
+    font-size: calc($regular * .8);
+  }
+
+  input, textarea, select {
+    font-size: calc(.8 * $small);
+    padding: 8px;
+  }  
+
+  .btn, .btn-secondary {
+    font-size: calc(.8 * $regularplus);
+  }
+
+  .error {
+    font-size: calc($smaller * .8);
+  }
 }

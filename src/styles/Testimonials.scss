@@ -24,14 +24,14 @@
         }
     
         .content-wrap {
-            padding-top: 15px;
+            padding-top: 20px;
             padding-bottom: 48px;
 
             .content {
                 display: -ms-grid;
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                grid-gap: 40px;
+                grid-gap: 20px;
     
                 .card {
                     display: flex;
@@ -53,6 +53,7 @@
 
                     .text-wrap {
                         max-width: 320px;
+                        width: 100%;
                         background-color: $white;
                         box-shadow: $shadow;
                         padding: 100px 20px 30px;
@@ -64,6 +65,10 @@
 
                         p {
                             padding: 10px 15px;
+                        }
+
+                        svg {
+                            font-size: $small;
                         }
                     }
                 }
@@ -105,6 +110,43 @@
             .btn-wrap {
                 justify-content: center;
                 margin-left: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: $midsize) {
+    #homepage {
+        #testimonials {
+            .title-wrap {
+                h3 {
+                    font-size: calc(.8 * $regularplus);
+                }
+            }
+        
+            .content-wrap {
+    
+                .content {
+                    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                    grid-gap: 20px;
+        
+                    .card {
+                        .img-wrap {
+                            max-width: 200px;
+                        }
+
+                        .text-wrap {
+
+                            svg {
+                                font-size: calc($small * .8);
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .content-bar {
+                max-width: calc($midsize * .8);
             }
         }
     }

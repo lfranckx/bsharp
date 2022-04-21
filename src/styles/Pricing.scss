@@ -27,9 +27,8 @@
                 box-shadow: $shadow;
                 background-color: $white;
 
-                p {
-                    font-size: large;
-                }
+                max-width: 450px;
+                margin: auto;
             }
 
             .top {
@@ -79,9 +78,39 @@
                     }
 
                     .price {
-                        font-size: $regular;
+                        font-size: $regularplus;
                         font-family: $font2;
                         font-weight: $bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $midsize) {
+    #pricing {
+        .content-wrap {
+            .content {
+                .card {
+                    box-shadow: $shadow;
+                    background-color: $white;
+                }
+    
+                .top {
+                    li {
+                        .check {
+                            font-size: calc(.8 * 32px);
+                            margin-right: 10px;
+                        }
+                    }
+                }
+    
+                .bottom {
+                    .text-wrap {
+                        .price {
+                            font-size: calc($regularplus * .8);
+                        }
                     }
                 }
             }

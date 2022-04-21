@@ -7,6 +7,7 @@ footer {
 
     small {
         color: $white;
+        font-size: $smallest;
     }
 
     .content-wrap {
@@ -73,6 +74,26 @@ footer {
 
                     &:hover {
                         font-weight: $bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $midsize) {
+    footer {
+        small {
+            font-size: calc($smallest * .8);
+        }
+
+        .content-wrap {
+            max-width: calc(.8 * $desktop);
+
+            .content {
+                .newsletter-wrap {
+                    .btn {
+                        font-size: calc(.8 * $small);
                     }
                 }
             }

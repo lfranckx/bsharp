@@ -26,6 +26,10 @@
                 font-weight: $light;
             }
         }
+
+        .btn, .btn-secondary {
+            font-size: $regularplus;
+        }
     }
 
     section {
@@ -48,11 +52,40 @@
         }
 
         .content-wrap {
-            padding: 100px 0;
+            padding: 100px 20px;
 
             .content {
                 max-width: $midsize;
                 margin: auto;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $midsize) {
+    #homepage {
+        header {
+            h1 {
+                margin-bottom: 40px;
+                color: $white;
+    
+                span {
+                    font-size: calc(.8 * $extreme);
+                    line-height: 1.4;
+                }
+            }
+        }
+    
+        section {
+            h2 {
+                font-size: calc(.8 * $largest);
+            }
+
+            .content-wrap {    
+                .content {
+                    max-width: calc($midsize * .8);
+                }
             }
         }
     }
