@@ -3,26 +3,6 @@
 #nav {
     width: 100%;
 
-    .banner {
-        width: 100%;
-        background: $black;
-        padding: 10px;
-        color: $white;
-        font-size: $smallest;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .link {
-            color: $white;
-            font-family: $font1;
-            font-weight: $bold;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-    }
-
     nav {
         display: flex;
         justify-content: space-between;
@@ -68,15 +48,64 @@
                 font-size: $small;
                 margin: 0 10px;
             }
+        }
+    }
 
-            @media screen and (max-width: $phone) {
+    .banner {
+        width: 100%;
+        background: $black;
+        padding: 10px;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            font-size: $smallest;
+        }
+
+        .link {
+            color: $white;
+            font-family: $font1;
+            font-weight: $bold;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: $phone) {
+    #nav {
+        nav {
+            h1 {
+                .link {
+                    font-size: calc($largest * .8);
+                }
+            }
+    
+            .navlinks {    
                 .link {
                     display: none;
                 }
-                
+    
                 .btn, .btn-secondary {
                     font-size: calc($small * .8);
+                    margin: 0 5px;
                 }
+            }
+        }
+
+        .banner {
+            p {
+                font-size: calc(.9 * $smallest);
+            }
+    
+            .link {
+                color: $white;
+                font-family: $font1;
+                font-weight: $bold;
+                text-decoration: underline;
+                cursor: pointer;
             }
         }
     }

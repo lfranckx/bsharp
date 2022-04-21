@@ -88,6 +88,7 @@
             top: 40px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
+            box-shadow: $shadow;
 
             .item {
                 display: flex;
@@ -116,38 +117,19 @@
     }
 }
 
-@media (max-width: $midsize) {
+@media (max-width: 770px) {
     #homepage {
         #testimonials {
-            .title-wrap {
-                h3 {
-                    font-size: calc(.8 * $regularplus);
-                }
-            }
-        
-            .content-wrap {
-    
-                .content {
-                    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-                    grid-gap: 20px;
-        
-                    .card {
-                        .img-wrap {
-                            max-width: 200px;
-                        }
-
-                        .text-wrap {
-
-                            svg {
-                                font-size: calc($small * .8);
-                            }
-                        }
-                    }
-                }
-            }
-    
             .content-bar {
-                max-width: calc($midsize * .8);
+                max-width: 508px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h3, .btn-wrap {
+                    text-align: center;
+                    margin: 20px 0;
+                }
             }
         }
     }

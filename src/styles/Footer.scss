@@ -100,3 +100,24 @@ footer {
         }
     }
 }
+
+@media screen and (max-width: $phone) {
+    footer {
+        .content-wrap {
+            .content {
+                flex-direction: column;
+
+                .newsletter-wrap {
+                    max-width: 360px;
+                    margin-right: auto;
+                    padding-right: 20px;
+                }
+
+                .menu-wrap {
+                    width: 100%;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}

@@ -48,6 +48,20 @@
                     font-size: calc($regularplus * .8);
                 }
             }
+
+            @media screen and (max-width: $phone) {
+                .img-wrap {
+                    max-width: 250px;
+                }
+            }
+
+            @media screen and (max-width: 555px) {
+                .img-wrap {
+                    max-width: 300px;
+                    margin: auto;
+                    float: none;
+                }
+            }
         }
     }
 }
