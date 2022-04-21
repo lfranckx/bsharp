@@ -8,28 +8,28 @@ const SignUpForm = () => {
     const [message, handleMessage] = useState('');
 
     const submitForm = async (values) => {
-        const { email } = values;
+        const { email, name } = values;
 
-        // try {
-        //     const payload = {
-        //         email_address: email
-        //     };
+        try {
+            const payload = {
+                id: 'bsharp',
+                email_address: email,
+                name: name
+            };
 
-        //     await axios.post("https://serene-journey-81970.herokuapp.com/", payload, 'bsharp');
-        //     handleMessage("Thank you for signing up. You'll be the first to know about upcoming news and events!");
+            await axios.post("http://localhost:9000/", payload);
+            handleMessage("Thank you for signing up. You'll be the first to know about upcoming news and events!");
 
-        // } catch (error) {
-        //     console.log(error.message);
-        //     handleMessage(error.message);
-        // }
-
-        handleMessage("Thank you for signing up. You'll be the first to know about upcoming news and events!");
+        } catch (error) {
+            console.log(error.message);
+            handleMessage(error.message);
+        }
     }
 
     const SignUpSchema = Yup.object().shape({
         email: Yup.string().email("* Invalid email").required("* Email is Required"),
         name: Yup.string().min(2, '* Name is too short').max(20, "* 20 maximum characters").required('* First Name is Required'),
-    })
+    });
 
     return (
         <>
