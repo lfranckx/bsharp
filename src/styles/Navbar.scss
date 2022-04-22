@@ -2,7 +2,6 @@
 
 #nav {
     width: 100%;
-
     nav {
         display: flex;
         justify-content: space-between;
@@ -21,6 +20,10 @@
                 font-family: $font3;
                 font-weight: $bolder;
                 font-size: $largest;
+
+                @media(max-width: 500px) {
+                    font-size: calc($largest * .8);
+                }
             }
         }
 
@@ -35,8 +38,6 @@
                 font-size: $small;
                 margin: 0 20px;
                 cursor: pointer;
-
-                
         
                 &:hover {
                     text-decoration: underline;
@@ -47,6 +48,79 @@
                 padding: 4px 20px;
                 font-size: $small;
                 margin: 0 10px;
+            }
+
+            @media(max-width: $phone) {
+                display: none;
+
+                .btn, .btn-secondary {
+                    font-size: calc($small * .8);
+                    margin: 0 5px;
+                }
+            }
+        }
+
+        .toggler {
+            display: none;
+            padding: 15px 5px;
+            width: 50px;
+            margin-left: auto;
+            cursor: pointer;
+            z-index: 2;
+            
+            @media(max-width: $phone) {
+                display: block;
+            }
+        }
+
+        .hamburger {
+            cursor: pointer;
+            width: 100%;
+
+            .line {
+                position: relative;
+                width: 100%;
+                height: 2px;
+                background-color: $black;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-transition: all 0.6s ease;
+                transition: all 0.6s ease;
+    
+                &:before, &:after {
+                    content: '';
+                    position: absolute;
+                    top: -10px;
+                    width: 100%;
+                    height: 2px;
+                    background: inherit;
+                }
+    
+                &:after {
+                    top: 10px;
+                }
+            }
+        }
+
+        // turn lines in X
+        .hamburger.active {
+            -webkit-transform: rotate(135deg);
+                    transform: rotate(135deg);
+
+            .line {
+                background-color: #141313;
+                &:before, &:after {
+                    top: 0;
+                    -webkit-transform: rotate(90deg);
+                            transform: rotate(90deg);
+                }
             }
         }
     }
@@ -62,6 +136,10 @@
 
         p {
             font-size: $smallest;
+
+            @media(max-width: $phone) {
+                font-size: calc(.9 * $smallest);
+            }
         }
 
         .link {
@@ -74,39 +152,60 @@
     }
 }
 
-@media screen and (max-width: $phone) {
-    #nav {
-        nav {
-            h1 {
-                .link {
-                    font-size: calc($largest * .8);
-                }
-            }
+
+#mobile-menu {
+    padding: 15px;
+    .navlinks {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .link {
+            text-decoration: none;
+            color: $black;
+            font-family: $font2;
+            font-weight: $bolder;
+            font-size: $small;
+            margin: 0 20px;
+            cursor: pointer;
     
-            .navlinks {    
-                .link {
-                    display: none;
-                }
-    
-                .btn, .btn-secondary {
-                    font-size: calc($small * .8);
-                    margin: 0 5px;
-                }
+            &:hover {
+                text-decoration: underline;
             }
         }
 
-        .banner {
-            p {
-                font-size: calc(.9 * $smallest);
-            }
-    
+        .btn, .btn-secondary {
+            padding: 4px 20px;
+            font-size: $small;
+            margin: 0 10px;
+        }
+
+        @media (max-width: $phone) {
             .link {
-                color: $white;
-                font-family: $font1;
-                font-weight: $bold;
-                text-decoration: underline;
-                cursor: pointer;
+                margin: 0;
+            }
+            .btn, .btn-secondary {
+                font-size: calc($small * .8);
+                margin: 0 5px;
             }
         }
+
+        @media (max-width: 400px) {
+            .link {
+                font-size: calc($small * .8);
+            }
+            .btn, .btn-secondary {
+                font-size: calc($small * .8);
+                margin: 0 5px;
+            }
+        } 
     }
+
+    @media(min-width: 751px) {
+        display: none;
+    }
+
+    @media (max-width: 400px) {
+        padding: 15px 10px;
+    } 
 }

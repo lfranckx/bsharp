@@ -154,10 +154,17 @@
     #homepage {
         header {
             height: 75vh;
+            padding: 10px;
             h1 {
                 span {
                     font-size: calc(.3 * $extreme);
                 }
+            }
+        }
+
+        section {
+            h2 {
+                font-size: calc(.6 * $largest);
             }
         }
     }

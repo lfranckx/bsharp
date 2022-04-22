@@ -113,18 +113,14 @@
                 justify-content: center;
                 margin-left: 80px;
             }
-        }
-    }
-}
 
-@media (max-width: 770px) {
-    #homepage {
-        #testimonials {
-            .content-bar {
+            @media (max-width: 770px) {
                 max-width: 508px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                border-radius: 15px;
+                padding: 30px;
 
                 h3, .btn-wrap {
                     text-align: center;

@@ -137,6 +137,10 @@ button {
   text-align: right;
 }
 
+.hide {
+  display: none;
+}
+
 @media screen and (max-width: $midsize) {
   h2, h3 {
     font-size: calc(.8 * $large);
