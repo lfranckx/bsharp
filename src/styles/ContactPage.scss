@@ -15,6 +15,16 @@
             font-size: $extreme;
             letter-spacing: 7px;
             font-weight: $light;
+
+            
+        }
+
+        @media screen and (max-width: $phone) {
+            background-image: url('../images/contact-header1.png');
+
+            h1 {
+                font-size: calc($extreme * .6);
+            }
         }
     }
 
