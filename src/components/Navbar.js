@@ -27,9 +27,9 @@ export default function Navbar() {
                         </div>
                     </div> : <></>}
                 </nav>
-                <div className='banner'>
+                {location.pathname === '/' ? <div className='banner'>
                     <p>Concerned about the corona virus? <span><Link className='link' activeClass="active" to="pricing" spy={true} smooth={true} offset={0} duration={700}>Online lessons</Link></span> are available</p>
-                </div>
+                </div> : <></>}
             </div>
             {location.pathname === '/' ? <nav id='mobile-menu' className={`${active ? 'show' : 'hide'}`}>
                 <ul className='navlinks'>
