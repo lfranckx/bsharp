@@ -29,7 +29,12 @@
             .flex {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+
+                @media screen and (max-width: $phone) {
+                    display: block;
+                }
             }
+
             .fieldset {
                 padding: 15px;
 
