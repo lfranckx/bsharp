@@ -13,6 +13,20 @@
             .fill {
                 width: 155.75px;
             }
+
+            @media screen and (max-width: $phone ) {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+
+                h2 {
+                    margin-right: auto;
+                    margin-left: 0;
+                }
+    
+                .fill {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -26,9 +40,13 @@
             .card {
                 box-shadow: $shadow;
                 background-color: $white;
-
                 max-width: 450px;
                 margin: auto;
+
+                @media screen and (max-width: $midsize) {
+                    box-shadow: $shadow;
+                    background-color: $white;
+                }
             }
 
             .top {
@@ -49,6 +67,11 @@
                         color: $green;
                         font-size: 32px;
                         margin-right: 10px;
+
+                        @media screen and (max-width: $midsize) {
+                            font-size: calc(.8 * 32px);
+                            margin-right: 10px;
+                        }
                     }
                 }
             }
@@ -84,64 +107,8 @@
                     }
                 }
             }
-        }
-    }
-}
 
-@media screen and (max-width: $midsize) {
-    #pricing {
-        .content-wrap {
-            .content {
-                .card {
-                    box-shadow: $shadow;
-                    background-color: $white;
-                }
-    
-                .top {
-                    li {
-                        .check {
-                            font-size: calc(.8 * 32px);
-                            margin-right: 10px;
-                        }
-                    }
-                }
-    
-                .bottom {
-                    .text-wrap {
-                        .price {
-                            font-size: calc($regularplus * .8);
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: $phone ) {
-    #pricing {
-        .banner {
-            .content {
-                flex-direction: row-reverse;
-                justify-content: space-between;
-
-                h2 {
-                    margin-right: auto;
-                    margin-left: 0;
-                }
-    
-                .fill {
-                    display: none;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 500px ) {
-    #pricing {
-        .content-wrap {
-            .content {
+            @media screen and (max-width: 500px ) {
                 display: -ms-grid;
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
