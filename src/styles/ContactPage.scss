@@ -15,8 +15,6 @@
             font-size: $extreme;
             letter-spacing: 7px;
             font-weight: $light;
-
-            
         }
 
         @media screen and (max-width: $phone) {
@@ -25,6 +23,10 @@
             h1 {
                 font-size: calc($extreme * .6);
             }
+        }
+
+        @media screen and (max-width: 500px) {
+            padding: 30px 0;
         }
     }
 
