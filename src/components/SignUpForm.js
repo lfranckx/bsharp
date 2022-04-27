@@ -17,7 +17,7 @@ const SignUpForm = () => {
                 name: name
             };
 
-            await axios.post("http://localhost:9000/", payload);
+            await axios.post("https://serene-journey-81970.herokuapp.com/", payload);
             handleMessage("Thank you for signing up. You'll be the first to know about upcoming news and events!");
 
         } catch (error) {
