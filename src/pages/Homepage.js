@@ -12,7 +12,7 @@ export default function Homepage() {
         window.scrollTo(0, 0);
     }, []);
 
-    const [content, toggleContent] = useState(false);
+    const [content, toggleContent] = useState(0);
     
     return (
         <div id='homepage'>
@@ -35,11 +35,10 @@ export default function Homepage() {
                         <h2><span>About</span> <span>B# Music Lessons</span></h2>
                     </div>
                     <div className='content-wrap'>
-                        <div className='content'>
+                        {content === 0 && <div className='content'>
                             <div className='img-wrap'>
-                                <img src={ !content ? cello : jordan } alt='cello graphic' />
+                                <img src={cello} alt='cello graphic' />
                             </div>
-                            { !content ? 
                                 <div className='text-wrap'>
                                     <p>
                                         <span className='italic bold'>B# Music </span>
@@ -49,19 +48,22 @@ export default function Homepage() {
                                         We offer at-home instruction and online lessons through Zoom to make learning on your schedule manageable and flexible.
                                     </p>
                                     <div className='btn-wrap'>
-                                        <button className='btn' onClick={() => {toggleContent(!content)}}>Meet the Teacher</button>
+                                        <button className='btn' onClick={() => {toggleContent(1)}}>Meet the Teacher</button>
                                     </div>
                                 </div>
-                            :   
-                                <div className='text-wrap'>
-                                    <p>I am a lifelong musician with a Bachelor's Degree in Music and more than 10 years of teaching experience. I teach all experience levels! If you're looking to start your first instrument, restarting after a long hiatus, or you are a seasoned musician looking for new insights, I can help!</p>
-                                    <p>I teach the student what they want to learn as well as the foundations of musicianship all while creating a comfortable learning environment and making it fun!</p>
-                                    <div className='btn-wrap'>
-                                        <button className='btn' onClick={() => {toggleContent(!content)}}>Go Back</button>
-                                    </div>
+                        </div>}
+                        {content === 1 && <div className='content'>
+                            <div className='img-wrap'>
+                                <img src={jordan} alt='Jordan Lee Wilson' />
+                            </div>
+                            <div className='text-wrap'>
+                                <p>I am a lifelong musician with a Bachelor's Degree in Music and more than 10 years of teaching experience. I teach all experience levels! If you're looking to start your first instrument, restarting after a long hiatus, or you are a seasoned musician looking for new insights, I can help!</p>
+                                <p>I teach the student what they want to learn as well as the foundations of musicianship all while creating a comfortable learning environment and making it fun!</p>
+                                <div className='btn-wrap'>
+                                    <button className='btn' onClick={() => {toggleContent(0)}}>Go Back</button>
                                 </div>
-                            }
-                        </div>
+                            </div>
+                        </div>}
                     </div>
 
                     

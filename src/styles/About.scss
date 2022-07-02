@@ -22,6 +22,18 @@
             justify-content: center;
             max-width: $desktop;
             margin: auto;
+            -webkit-animation: fade .8s ease forwards;
+                    animation: fade .8s ease forwards;
+
+            @-webkit-keyframes fade {
+                0%{ opacity: 0; }
+                100% { opacity: 1;}
+            }
+    
+            @keyframes fade {
+                0%{ opacity: 0; }
+                100% { opacity: 1;}
+            }
             
             .img-wrap {
                 margin-right: 20px;
