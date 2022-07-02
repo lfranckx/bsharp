@@ -2,9 +2,6 @@ import React from 'react';
 import '../styles/Testimonials.scss';
 import { GiGClef } from 'react-icons/gi';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
-import zack from '../images/zack.png';
-import viv from '../images/vivian.png';
-import jason from '../images/jason.png';
 import { Link } from 'react-router-dom';
 
 export default function Testimonials() {
@@ -18,9 +15,8 @@ export default function Testimonials() {
                 <div className='content-wrap'>
                     <ul className='content'>
                         <li className='card'>
-                            <div className='img-wrap'><img src={jason}alt='Zack headshot' /></div>
+                            <div className='name-wrap'><h3>Christopher B.</h3></div>
                             <div className='text-wrap'>
-                                <h3>Christopher</h3>
                                 <div className='text-left'>
                                     <FaQuoteLeft className='quote-left' />
                                 </div>
@@ -31,9 +27,9 @@ export default function Testimonials() {
                             </div>
                         </li>
                         <li className='card'>
-                            <div className='img-wrap'><img src={viv}alt='Vivian headshot' /></div>
+                            <div className='name-wrap'><h3>Chris M.</h3></div>
                             <div className='text-wrap'>
-                                <h3>Vivian</h3>
+                                
                                 <div className='text-left'>
                                     <FaQuoteLeft className='quote-left' />
                                 </div>
@@ -44,9 +40,8 @@ export default function Testimonials() {
                             </div>
                         </li>
                         <li className='card'>
-                            <div className='img-wrap'><img src={zack}alt='Jason headshot' /></div>
+                            <div className='name-wrap'><h3>Reid S.</h3></div>
                             <div className='text-wrap'>
-                                <h3>Jason</h3>
                                 <div className='text-left'>
                                     <FaQuoteLeft className='quote-left' />
                                 </div>
