@@ -30,13 +30,11 @@ const ContactPage = () => {
         }
 
         try {
-            console.log(newValues);
             emailjs.send("service_wavceap", "template_7c0ldzm", newValues, "user_4ZnH44kohKcJmQhnL2VGX")
             .then(res => {
                     toggleMessageSuccess(true);
                     handleButtonState('Sent');
                     handleButtonDisabled(true);
-                    console.log(res);
                 }
             )
         } catch (error) {
