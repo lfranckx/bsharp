@@ -63,7 +63,7 @@ const ContactPage = () => {
         name: Yup.string().min(2, '* Name is too short').max(20, "* 20 maximum characters").required('* Required'),
         email: Yup.string().email("* Invalid email").required("* Required"),
         age: Yup.number().typeError('* Age must be a number').min(3, '* Age is too low').max(90, '* Age is too old').required('* Required'),
-        message: Yup.string().min(4, "* Message is too short").max(300, "* 300 maximum characters").required("* Required"),
+        message: Yup.string().min(4, "* Message is too short").max(800, "* 800 maximum characters").required("* Required"),
         instrument: Yup.string().oneOf(Object.values(instruments), "* Must select one of the valid options").required("* Required"),
         experience: Yup.string().oneOf(Object.values(experience), "* Must select one of the valid options").required("* Required"),
         lesson_type: Yup.string().oneOf(Object.values(lesson_type), "* Must select one of the valid options").required("* Required"),
