@@ -30,7 +30,7 @@ const ContactPage = () => {
         }
 
         try {
-            emailjs.send("service_wavceap", "template_7c0ldzm", newValues, "user_4ZnH44kohKcJmQhnL2VGX")
+            emailjs.send("service_yz67t52", "template_7c0ldzm", newValues, "user_4ZnH44kohKcJmQhnL2VGX")
             .then(res => {
                     toggleMessageSuccess(true);
                     handleButtonState('Sent');
