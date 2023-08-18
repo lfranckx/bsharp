@@ -94,13 +94,17 @@
                 padding: 0 15px;
             }
 
-            .btn {
+            .btn-secondary {
                 padding: 5px 25px;
                 font-size: $regular;
-                margin: 20px;
 
                 &[disabled] {
                     opacity: 0.8;
+                    cursor: default;
+                    :hover {
+                        background: #155E87;
+                        
+                    }
                 }
             }
         }
