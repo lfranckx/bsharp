@@ -98,7 +98,15 @@
                 padding: 5px 25px;
                 font-size: $regular;
                 margin: 20px;
+
+                &[disabled] {
+                    opacity: 0.8;
+                }
             }
         }
+    }
+
+    .message {
+        margin: 32px 20px;
     }
 }
