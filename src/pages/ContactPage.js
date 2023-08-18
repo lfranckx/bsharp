@@ -20,6 +20,7 @@ const ContactPage = () => {
         const newValues = {
             name: values.name,
             email: values.email,
+            phone: values.phone,
             age: values.age,
             message: values.message,
             user_instrument: values.instrument,
@@ -59,9 +60,12 @@ const ContactPage = () => {
         online: "Online"
     }
 
+    const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
     const contactFormSchema = Yup.object().shape({
         name: Yup.string().min(2, '* Name is too short').max(20, "* 20 maximum characters").required('* Required'),
         email: Yup.string().email("* Invalid email").required("* Required"),
+        phone: Yup.string().matches(phoneRegExp, "* This doesn't look like a phone number").required('* Required'),
         age: Yup.number().typeError('* Age must be a number').min(3, '* Age is too low').max(90, '* Age is too old').required('* Required'),
         message: Yup.string().min(4, "* Message is too short").max(800, "* 800 maximum characters").required("* Required"),
         instrument: Yup.string().oneOf(Object.values(instruments), "* Must select one of the valid options").required("* Required"),
@@ -103,6 +107,20 @@ const ContactPage = () => {
                                                 <ErrorMessage component="div" className='error' name='name' />
                                             </div>
                                         </div>
+
+                                        <div className='wrap'>
+                                            <div className="label">
+                                                <label htmlFor="phone" id='phone'>
+                                                    Phone
+                                                    <Field
+                                                        name="phone"
+                                                    />
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <ErrorMessage component="div" className='error' name='email' />
+                                            </div>
+                                        </div>
                                         
                                         <div className='wrap'>
                                             <div className="label">
@@ -131,20 +149,20 @@ const ContactPage = () => {
                                                 <ErrorMessage component="div" className='error' name='age' />
                                             </div>
                                         </div>
-                                        
+
                                         <div className='wrap'>
                                             <div className="label">
-                                                <label htmlFor="message" id='message' className='custom'>
+                                                <label htmlFor="goals" id='goals' className='custom'>
                                                     <Field
-                                                        name="message"
+                                                        name="goals"
                                                         as='textarea'
-                                                        rows='10'
-                                                        placeholder='Message'
+                                                        rows='6'
+                                                        placeholder='Goals/Expectations'
                                                     />
                                                 </label>
                                             </div>
                                             <div>
-                                                <ErrorMessage component="div" className='error' name='message' />
+                                                <ErrorMessage component="div" className='error' name='goals' />
                                             </div>
                                         </div>
                                     </fieldset>
@@ -213,17 +231,17 @@ const ContactPage = () => {
                                         
                                         <div className='wrap'>
                                             <div className="label">
-                                                <label htmlFor="goals" id='goals' className='custom'>
+                                                <label htmlFor="message" id='message' className='custom'>
                                                     <Field
-                                                        name="goals"
+                                                        name="message"
                                                         as='textarea'
                                                         rows='10'
-                                                        placeholder='Goals/Expectations'
+                                                        placeholder='Message'
                                                     />
                                                 </label>
                                             </div>
                                             <div>
-                                                <ErrorMessage component="div" className='error' name='goals' />
+                                                <ErrorMessage component="div" className='error' name='message' />
                                             </div>
                                         </div>
                                     </fieldset>
