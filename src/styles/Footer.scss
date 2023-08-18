@@ -8,6 +8,18 @@ footer {
     small {
         color: $white;
         font-size: $smallest;
+
+        .link {
+            color: #1BA49C;
+            cursor: pointer;
+            transition: none;
+            text-decoration: none;
+
+            &:hover {
+                font-weight: 900;
+                text-decoration: underline
+            }
+        }
     }
 
     .content-wrap {
