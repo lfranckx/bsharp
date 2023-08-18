@@ -50,7 +50,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <small>Copyright © 2021. All rights reserved. B# Music Lessons. LLC | Website proudly created by <a className='link' href='https://www.lfxmedia.io/' target='_blank'>LFX Media</a></small>
+            <small>Copyright © 2021. All rights reserved. B# Music Lessons. LLC | Website proudly created by <a className='link' href='https://www.lfxmedia.io/' target='_blank' rel='noopener'>LFX Media</a></small>
         </footer>
     );
 }

@@ -10,10 +10,9 @@ const ContactPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const [messageSuccess, toggleMessageSuccess] = useState(false);
     const [buttonState, handleButtonState] = useState('Send');
     const [buttonDisabled, handleButtonDisabled] = useState(false);
-    const [message, handleMessage] = useState('');
+    const [message, handleMessage] = useState(null);
 
     const submitForm = (values) => {
         handleButtonState('Sending');
@@ -33,7 +32,7 @@ const ContactPage = () => {
         try {
             emailjs.send("service_yz67t52", "template_7c0ldzm", newValues, "user_4ZnH44kohKcJmQhnL2VGX")
             .then(res => {
-                    toggleMessageSuccess(true);
+                    handleMessage('Thank you for getting in touch. We promise to respond promptly. We are so excited to meet you!')
                     handleButtonState('Sent');
                     handleButtonDisabled(true);
                 }
