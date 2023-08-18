@@ -87,7 +87,7 @@ const ContactPage = () => {
                 <main>
                     <div className='form-wrap'>
                         <Formik 
-                            initialValues={{ name: "", email: "", age: "", message: "", instrument: "", experience: "", lesson_type: ""}} 
+                            initialValues={{ name: "", email: "", phone: "", age: "", message: "", instrument: "", experience: "", lesson_type: ""}} 
                             validationSchema={contactFormSchema}
                             onSubmit={submitForm}
                         >
